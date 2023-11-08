@@ -19,6 +19,11 @@ export function PostsNew() {
       <div className="textbox">Enter your blog text here.</div>
       <br></br>
       <button className="post-button">Post</button>
+
+      <h2>Upload image here:</h2>
+      <div className="iamgebox">Enter your image URL here.</div>
+      <br></br>
+      <button className="post-button">Push</button>
     </div>
   );
 }
