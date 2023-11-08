@@ -1,7 +1,7 @@
 import { PostsIndex } from "./PostsIndex";
 import { PostsNew } from "./PostsNew";
 import axios from "axios";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
@@ -12,6 +12,8 @@ export function Content() {
       setPosts(response.data);
     });
   };
+
+  useEffect(handleIndexPosts, []);
 
   return (
     <div>
