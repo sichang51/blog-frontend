@@ -16,12 +16,16 @@ export function PostsNew() {
       </form>
 
       <h2>Enter your text here:</h2>
-      <div className="textbox">Enter your blog text here.</div>
+      <form>
+        <label>
+          <input type="text" placehoolder="Enter your blog text here." />
+        </label>
+      </form>
       <br></br>
       <button className="post-button">Post</button>
 
       <h2>Upload image here:</h2>
-      <div className="iamgebox">Enter your image URL here.</div>
+      <div className="imagebox">Enter your image URL here.</div>
       <br></br>
       <button className="post-button">Push</button>
     </div>
