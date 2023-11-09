@@ -61,6 +61,13 @@ html {
   margin: auto;
 }
 
+.blog-textbox{
+  height: 200px;
+  width: 500px;
+  textAlignVertical: top;
+  }
+
+
 
 h1{
   font-weight: 100;
@@ -73,17 +80,6 @@ h2{
 }
 
 
-.textbox{
-  border-style: solid;
-  border-color: rgb(118,74,189);
-  font-weight: 100;
-  border-radius:10px;
-  width: 400px;
-  height: 100px;
-  margin: 1px;
-  padding: 1px;
-  color: black;
-}
 
 .post-button{
   border-radius:10px;

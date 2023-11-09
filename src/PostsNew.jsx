@@ -2,10 +2,9 @@ export function PostsNew() {
   return (
     <div id="posts-new">
       <div className="new-post">
-        <h1>New post</h1>
-        <h2>Enter your new blog posts here:</h2>
+        <h1>New Posts</h1>
       </div>
-
+      <h2>Enter your new blog posts here:</h2>
       <form>
         <label>
           <input type="text" placeholder="Title" />
@@ -14,14 +13,13 @@ export function PostsNew() {
         <br></br>
         <input type="submit" value="submit" /> */}
       </form>
-
-      <h2>Enter your text here:</h2>
       <form>
         <label>
-          <input type="text" placehoolder="Enter your blog text here." />
+          <input className="blog-textbox" type="text" placeholder="Enter your blog text here." />
         </label>
       </form>
       <br></br>
+
       <button className="post-button">Post</button>
 
       <h2>Upload image here:</h2>
