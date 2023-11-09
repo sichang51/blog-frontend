@@ -5,7 +5,7 @@
 html {
   scroll-behavior: smooth;
   background-color: white;
-  color: rgb(118,74,189);
+  color: rgb(25, 69, 117);
   font-family: Arial, Helvetica, sans-serif;
   font-weight: 100;
 }
@@ -25,32 +25,34 @@ html {
  .header-home-button{
   border-radius: 10px;
   margin:1px;
-  background-color: rgb(118,74,189);
+  background-color: rgb(25, 69, 117);
   color: white;
-  border-color: rgb(118,74,189);
+  border-color: rgb(25, 69, 117);
   outline: none;
  }
 
  .header-all-posts-button{
   border-radius: 10px;
   margin:1px;
-  background-color: rgb(118,74,189);
+  background-color: rgb(25, 69, 117);
   color: white;
-  border-color: rgb(118,74,189);
+  border-color: rgb(25, 69, 117);
  }
 
  .header-new-post-button{
   border-radius: 10px;
   margin:1px;
-  background-color: rgb(118,74,189);
+  background-color: rgb(25, 69, 117);
   color: white;
-  border-color: rgb(118,74,189);
+  border-color: rgb(25, 69, 117);
  } 
 
 
 
 .new-post{
-  background-color: rgb(118,74,189);
+  background: linear-gradient(to right,rgb(109, 160, 227), rgb(25, 69, 117));
+
+  /* background-color: rgb(118,74,189); */
   color: white;
   font-weight: 100;
   /* border-radius:10px; */
@@ -83,8 +85,8 @@ h2{
 
 .post-button{
   border-radius:10px;
-  border-color: rgb(118,74,189);
-  background-color: rgb(118,74,189);
+  border-color: rgb(25, 69, 117);
+  background-color: rgb(25, 69, 117);
   color: white;
 }
 
@@ -97,21 +99,22 @@ input[type=text] {
   padding: 5px;
   margin:10px 0;
   border-radius:10px;
-  border-color: rgb(118,74,189);
+  border-color: rgb(25, 69, 117);
 }
 
 input[type=submit]{
   
   padding: 5px;
   border-radius:10px;
-  background-color: rgb(118,74,189);
+  background-color: rgb(25, 69, 117);
   color: white;
   border-color: white;
   text-align: center;
 }
 
 .header-all-posts{
-  background-color: rgb(118,74,189);
+  background: linear-gradient(to right,rgb(109, 160, 227), rgb(25, 69, 117));
+  /* background-color: rgb(118,74,189); */
   color: white;
 }
 
