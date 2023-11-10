@@ -17,7 +17,20 @@ export function Content() {
     });
   };
 
+  const handleCreatePost = (params) => {
+    axios
+      .post("http://localhost:3000/posts.json", params)
+      .then((response) => {
+        console.log(response.data);
+        setPosts([...posts, response.data]);
+      })
+      .catch((error) => {
+        console.log(error.response.data.error);
+      });
+  };
+
   const handleShowPost = (post) => {
+    console.log(post);
     setIsPostsShowVisible(true);
     setCurrentPost(post);
   };
@@ -29,14 +42,13 @@ export function Content() {
   useEffect(handleIndexPosts, []);
 
   return (
-    <div>
-      <PostsNew />
-      <button onClick={handleIndexPosts}>Load Posts</button>
+    <div className="container">
+      <PostsNew onCreatePost={handleCreatePost} />
+      {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
       <PostsIndex myPosts={posts} onShowPost={handleShowPost} />
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} />
       </Modal>
     </div>
   );
-  <div className="container"></div>;
 }

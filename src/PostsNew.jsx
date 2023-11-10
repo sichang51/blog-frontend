@@ -1,20 +1,20 @@
-import axios from "axios";
-
-export function PostsNew() {
+export function PostsNew(props) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
     const params = new FormData(event.target);
+    props.onCreatePost(params);
+    event.target.reset();
 
-    axios
-      .post("http://localhost:5173/posts.json", params)
-      .then((response) => {
-        console.log(response.data);
-        event.target.reset();
-      })
-      .catch((error) => {
-        console.log(error.response.data.error);
-      });
+    // axios
+    //   .post("http://localhost:5173/posts.json", params)
+    //   .then((response) => {
+    //     console.log(response.data);
+    //     event.target.reset();
+    //   })
+    //   .catch((error) => {
+    //     console.log(error.response.data.error);
+    //   });
   };
   return (
     <div id="posts-new">
@@ -23,6 +23,19 @@ export function PostsNew() {
       </div>
       <form onSubmit={handleSubmit}>
         <h2>Enter your new blog posts here:</h2>
+        <div className="form-group">
+          New Post Title: <input className="form-control" type="text" name="title" />
+        </div>
+        <div className="form-group">
+          New Blog Post: <input className="form-control" type="text" name="body" />
+        </div>
+        <div className="form-group">
+          New Image URL: <input className="form-control" type="text" name="image" />
+        </div>
+        <button type="Submit">Create New Post</button>
+        <br></br>
+        <br></br>
+        {/* // old form data fields// */}
         {/* <form>
         <label>
           <input type="text" placeholder="Title" />
@@ -44,19 +57,6 @@ export function PostsNew() {
       <div className="imagebox">Enter your image URL here.</div>
       <br></br>
       <button className="post-button">Push</button> */}
-
-        <div className="form-group">
-          New Post Title: <input className="form-control" type="text" name="title" />
-        </div>
-        <div className="form-group">
-          New Blog Post: <input className="form-control" type="text" name="body" />
-        </div>
-        <div className="form-group">
-          New Image URL: <input className="form-control" type="text" name="image" />
-        </div>
-        <button type="Submit">Create New Post</button>
-        <br></br>
-        <br></br>
       </form>
     </div>
   );
