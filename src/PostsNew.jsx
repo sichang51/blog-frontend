@@ -36,6 +36,9 @@ export function PostsNew() {
       <div className="form-group">
         New Image URL: <input className="form-control" type="text" name="image" />
       </div>
+      <button type="Submit">Create New Post</button>
+      <br></br>
+      <br></br>
     </div>
   );
 }
