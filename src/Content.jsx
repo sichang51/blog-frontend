@@ -38,4 +38,5 @@ export function Content() {
       </Modal>
     </div>
   );
+  <div className="container"></div>;
 }
