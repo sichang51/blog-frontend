@@ -12,6 +12,7 @@ export function PostsIndex(props) {
             <img src={post.image} alt="" height="200px" width="50px" />
             {/* <p>{post.body}</p> */}
             <br></br>
+            <br></br>
             <button className="btn btn-secondary" onClick={() => props.onShowPost(post)}>
               More Info
             </button>
