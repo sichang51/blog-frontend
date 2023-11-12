@@ -32,7 +32,9 @@ export function PostsNew(props) {
         <div className="form-group">
           New Image URL: <input className="form-control" type="text" name="image" />
         </div>
-        <button type="Submit">Create New Post</button>
+        <button type="Submit" className="btn btn-primary">
+          Create New Post
+        </button>
         <br></br>
         <br></br>
         {/* // old form data fields// */}

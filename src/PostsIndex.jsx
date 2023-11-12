@@ -13,7 +13,7 @@ export function PostsIndex(props) {
             {/* <p>{post.body}</p> */}
             <br></br>
             <br></br>
-            <button className="btn btn-secondary" onClick={() => props.onShowPost(post)}>
+            <button className="btn btn-primary" onClick={() => props.onShowPost(post)}>
               More Info
             </button>
           </div>
