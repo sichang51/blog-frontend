@@ -23,7 +23,7 @@ export function Header() {
         style={{ alignSelf: "center" }}
         alt="Blog Logo"
       /> */}
-      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "blue" }}>
+      <nav className="navbar navbar-expand-lg" style={{ backgroundColor: "#0d6efd" }} data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">
             Navbar
