@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export function Header() {
   return (
     <div>
@@ -42,7 +44,7 @@ export function Header() {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+                <a className="nav-link active" aria-current="page" href="/">
                   Home
                 </a>
               </li>
@@ -55,6 +57,16 @@ export function Header() {
                 <a className="nav-link" href="#posts-new">
                   New Posts
                 </a>
+              </li>
+              <li className="nav-item">
+                <Link to="/signup" className="nav-link" style={{ textDecoration: "none" }}>
+                  Signup
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/login" className="nav-link" style={{ textDecoration: "none" }}>
+                  Login
+                </Link>
               </li>
             </ul>
           </div>

@@ -4,6 +4,7 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import { Modal } from "./Modal";
 import { PostsShow } from "./PostsShow";
+import { Routes, Route } from "react-router-dom";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
 
@@ -69,8 +70,11 @@ export function Content() {
 
   return (
     <div className="container">
-      <Signup />
-      <Login />
+      <Routes>
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/login" element={<Login />} />
+      </Routes>
+
       <PostsNew onCreatePost={handleCreatePost} />
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
       <PostsIndex myPosts={posts} onShowPost={handleShowPost} />
