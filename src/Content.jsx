@@ -7,6 +7,7 @@ import { PostsShow } from "./PostsShow";
 import { Routes, Route } from "react-router-dom";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { PostsShowPage } from "./PostsShowPage";
 
 export function Content() {
   const [posts, setPosts] = useState([]);
@@ -79,6 +80,8 @@ export function Content() {
         <Route path="/posts/new" element={<PostsNew onCreatePost={handleCreatePost} />} />
         <Route path="/posts" element={<PostsIndex myPosts={posts} onShowPost={handleShowPost} />} />
         <Route path="/" element={<PostsIndex myPosts={posts} onShowPost={handleShowPost} />} />
+
+        <Route path="/posts/:id" element={<PostsShowPage />} />
       </Routes>
 
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
