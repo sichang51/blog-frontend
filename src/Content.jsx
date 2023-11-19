@@ -78,6 +78,7 @@ export function Content() {
         <Route path="/login" element={<Login />} />
         <Route path="/posts/new" element={<PostsNew onCreatePost={handleCreatePost} />} />
         <Route path="/posts" element={<PostsIndex myPosts={posts} onShowPost={handleShowPost} />} />
+        <Route path="/" element={<PostsIndex myPosts={posts} onShowPost={handleShowPost} />} />
       </Routes>
 
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
