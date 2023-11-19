@@ -20,12 +20,15 @@ export function Content() {
     });
   };
 
-  const handleCreatePost = (params) => {
+  const handleCreatePost = (params, successCallback) => {
     axios
       .post("http://localhost:3000/posts.json", params)
       .then((response) => {
         console.log(response.data);
         setPosts([...posts, response.data]);
+
+        successCallback();
+        window.location.href = "/posts";
       })
       .catch((error) => {
         console.log(error.response.data.error);
@@ -73,11 +76,12 @@ export function Content() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/posts/new" element={<PostsNew onCreatePost={handleCreatePost} />} />
+        <Route path="/posts" element={<PostsIndex myPosts={posts} onShowPost={handleShowPost} />} />
       </Routes>
 
-      <PostsNew onCreatePost={handleCreatePost} />
       {/* <button onClick={handleIndexPosts}>Load Posts</button> */}
-      <PostsIndex myPosts={posts} onShowPost={handleShowPost} />
+
       <Modal show={isPostsShowVisible} onClose={handleClose}>
         <PostsShow post={currentPost} onUpdatePost={handleUpdatePost} onDestroyPost={handleDestroyPost} />
       </Modal>

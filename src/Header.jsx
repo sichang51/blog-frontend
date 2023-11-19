@@ -49,14 +49,14 @@ export function Header() {
                 </a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#posts-index">
+                <Link className="nav-link" to="/posts">
                   All Posts
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="#posts-new">
+                <Link className="nav-link" to="/posts/new">
                   New Posts
-                </a>
+                </Link>
               </li>
               <li className="nav-item">
                 <Link to="/signup" className="nav-link" style={{ textDecoration: "none" }}>

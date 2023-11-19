@@ -3,19 +3,18 @@ export function PostsNew(props) {
     event.preventDefault();
 
     const params = new FormData(event.target);
-    props.onCreatePost(params);
-    event.target.reset();
-
-    // axios
-    //   .post("http://localhost:5173/posts.json", params)
-    //   .then((response) => {
-    //     console.log(response.data);
-    //     event.target.reset();
-    //   })
-    //   .catch((error) => {
-    //     console.log(error.response.data.error);
-    //   });
+    props.onCreatePost(params, () => event.target.reset());
   };
+  // axios
+  //   .post("http://localhost:5173/posts.json", params)
+  //   .then((response) => {
+  //     console.log(response.data);
+  //     event.target.reset();
+  //   })
+  //   .catch((error) => {
+  //     console.log(error.response.data.error);
+  //   });
+
   return (
     <div id="posts-new">
       <div className="new-post">
