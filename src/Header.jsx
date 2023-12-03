@@ -68,6 +68,11 @@ export function Header() {
                   Login
                 </Link>
               </li>
+              <li className="nav-item">
+                <Link to="/logoutLink" className="nav-link" style={{ textDecoration: "none" }}>
+                  Logout
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
