@@ -8,7 +8,7 @@ export function PostsIndex(props) {
     <div id="posts-index" className="container text-center">
       <div className="header-all-posts">
         <h1>All posts</h1>
-        Search Filter:{" "}
+        Search Posts:{" "}
         <input type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />
       </div>
       <div className="row">
