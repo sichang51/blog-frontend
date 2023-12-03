@@ -26,10 +26,10 @@ export function PostsIndex(props) {
           .filter((post) => post.title.toLowerCase().includes(searchFilter.toLowerCase()))
           .map((post) => (
             <div key={post.id} className="blogs col-lg-4 col-md-6 col-12 my-3">
-              <h3>{post.title}</h3>
               <img src={post.image} alt="" height="200px" width="50px" />
               {/* <p>{post.body}</p> */}
-              <br></br>
+              <h3>{post.title}</h3>
+
               <br></br>
               <button className="btn btn-primary" onClick={() => props.onShowPost(post)}>
                 More Info
