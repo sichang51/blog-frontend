@@ -9,7 +9,17 @@ export function PostsIndex(props) {
       <div className="header-all-posts">
         <h1>All posts</h1>
         Search Posts:{" "}
-        <input type="text" value={searchFilter} onChange={(event) => setSearchFilter(event.target.value)} />
+        <input
+          type="text"
+          value={searchFilter}
+          onChange={(event) => setSearchFilter(event.target.value)}
+          list="titles"
+        />
+        <datalist id="titles">
+          {props.myPosts.map((post) => (
+            <option key={post.id}>{post.title}</option>
+          ))}
+        </datalist>
       </div>
       <div className="row">
         {props.myPosts
